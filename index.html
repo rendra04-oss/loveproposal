@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Untuk Seseorang yang Spesial ♡</title>
+  <meta name="theme-color" content="#180b16" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <main id="app">
+    <section id="landing" class="screen active">
+      <div class="orb orb-a"></div><div class="orb orb-b"></div>
+      <div class="hero-card glass">
+        <p class="eyebrow">SEBUAH PERJALANAN KECIL</p>
+        <h1>Aku punya satu hal<br><span>untuk kamu.</span></h1>
+        <p class="sub">Tapi sebelum sampai ke pertanyaan terakhir, kamu harus melewati beberapa level kecil. Tenang, nggak ada jawaban salah… kecuali kamu kabur. ♡</p>
+        <div class="name-wrap">
+          <label for="name">Namamu</label>
+          <input id="name" maxlength="40" placeholder="Tulis nama kamu…" autocomplete="off" />
+        </div>
+        <button class="primary" onclick="startJourney()">Mulai perjalanan <span>→</span></button>
+        <p class="tiny">Dengan lanjut, progres permainanmu akan disimpan agar pengirim bisa melihat perjalananmu sampai akhir.</p>
+      </div>
+    </section>
+
+    <section id="game" class="screen">
+      <header class="topbar"><div class="brand">♡ untukmu</div><div class="progress"><span id="progressBar"></span></div><div id="stepLabel">1/5</div></header>
+      <div id="gameContent" class="game-shell"></div>
+    </section>
+
+    <section id="result" class="screen">
+      <div class="result-card glass">
+        <div class="sparkle">✦</div>
+        <p class="eyebrow">BAB TERAKHIR</p>
+        <h2 id="resultTitle">Jadi…</h2>
+        <p id="resultText"></p>
+        <div id="answerButtons" class="answers"></div>
+      </div>
+    </section>
+
+    <section id="admin" class="screen">
+      <div class="admin-card glass">
+        <div class="admin-head"><div><p class="eyebrow">PRIVATE DASHBOARD</p><h2>History perjalanan</h2></div><button class="ghost" onclick="show('landing')">Keluar</button></div>
+        <div class="admin-login" id="adminLogin"><input id="adminKey" type="password" placeholder="Admin key"/><button class="primary" onclick="loadHistory()">Buka history</button></div>
+        <div id="historyList"></div>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
